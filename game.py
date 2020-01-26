@@ -119,11 +119,11 @@ def main_game():
                         p2.direction = 2
                     elif event.key == pygame.K_a:
                         p2.direction = 3
-                if event.key == pygame.K_SPACE and not p2.is_reloading():
+                if event.key == pygame.K_t and not p2.is_reloading():
                     p2.fire()
                     bullets.append(Bullet(p2.get_muzzle_coordes()[0], p2.get_muzzle_coordes()[1], 'bullet.png', display_width, display_height, p2.direction))
                     bullets[len(bullets) - 1].move()
-                if event.key == pygame.K_p and not p1.is_reloading():
+                if event.key == pygame.K_m and not p1.is_reloading():
                     p1.fire()
                     bullets.append(Bullet(p1.get_muzzle_coordes()[0], p1.get_muzzle_coordes()[1], 'bullet.png', display_width, display_height, p1.direction))
                     bullets[len(bullets)-1].move()
